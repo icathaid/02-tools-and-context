@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - "9"
-
-# before_script:
-# # - cd lab-james
-# - npm i
+before script:
+    - npm i
+    - npm install lint jest
 
 script:
   - npm run lint
