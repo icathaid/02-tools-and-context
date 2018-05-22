@@ -4,6 +4,6 @@ node_js:
 
 script:
   - npm i
-  - npm install lint jest
+  - npm install eslint jest
   - npm run lint
   - npm test
