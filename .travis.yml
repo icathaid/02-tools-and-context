@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - "9"
-before script:
-    - npm i
-    - npm install lint jest
 
 script:
+  - npm init
+  - npm install lint jest
   - npm run lint
   - npm test
