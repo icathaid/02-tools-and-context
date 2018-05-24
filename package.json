@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/icathaid/02-tools-and-context/issues"
   },
-  "homepage": "https://github.com/icathaid/02-tools-and-context#readme"
+  "homepage": "https://github.com/icathaid/02-tools-and-context#readme",
+  "dependencies": {
+    "eslint": "^4.19.1"
+  }
 }
