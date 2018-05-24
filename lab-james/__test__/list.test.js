@@ -50,7 +50,17 @@ describe('list module', () => {
     friends.forEach(McIfy);
     expect(friends).toEqual(friendList);
   });
-  //  test
+  //  map method
+  it('should add 42 to each element of the input array', () => {
+    let questions = new List([1, 2, 3, 4, 5]);
+    let answers = new List ([43, 44, 45, 46, 47]);
+    function hitchHike(num){
+      return num + 42;
+    }
+    questions.map(hitchHike);
+    expect(questions).toEqual(answers);
+  });
+  //  test method, delete when done
   it('should return bill if pushed multiple names', () => {
     let testeroo = new List();
     testeroo.push('bill', 'ted');

@@ -21,6 +21,13 @@ class List {
     }
     return undefined;
   }
+  map(func){
+    var theAnswer = [];
+    for(var i = 0; i < this.length; i++){
+      this[i] = func(this[i]);
+    }
+    return theAnswer;
+  }
 }
 
 module.exports = List;
