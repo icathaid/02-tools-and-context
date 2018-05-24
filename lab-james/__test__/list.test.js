@@ -60,10 +60,15 @@ describe('list module', () => {
     questions.map(hitchHike);
     expect(questions).toEqual(answers);
   });
-  //  test method, delete when done
-  it('should return bill if pushed multiple names', () => {
-    let testeroo = new List();
-    testeroo.push('bill', 'ted');
-    expect(testeroo[0]).toBe('bill');
+  //  filter method
+  it('should return an array of numbers if given an array of mixed data types', () => {
+    let inputList = new List([1, 'bill', 2, 'ted', 3]);
+    let outputList = new List([1, 2, 3]);
+    function noMoreAdventures(thing){
+      if(typeof thing === 'number'){
+        return true;
+      }
+    }
+    expect(inputList.map(noMoreAdventures)).toEqual(outputList);
   });
 });

@@ -28,6 +28,16 @@ class List {
     }
     return theAnswer;
   }
+  filter(func){
+    var outputArr = [];
+    for(var i = 0; i < this.length; i++){
+      this[i] = func(this[i]);
+      if(func(this[i] === true)){
+        outputArr.push(this[i]);
+      }
+    }
+    return outputArr;
+  }
 }
 
 module.exports = List;
