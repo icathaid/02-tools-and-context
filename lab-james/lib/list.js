@@ -22,21 +22,12 @@ class List {
     return undefined;
   }
   map(func){
-    var theAnswer = [];
     for(var i = 0; i < this.length; i++){
-      this[i] = func(this[i]);
+      func(this[i]);
     }
-    return theAnswer;
   }
   filter(func){
-    var outputArr = [];
-    for(var i = 0; i < this.length; i++){
-      this[i] = func(this[i]);
-      if(func(this[i] === true)){
-        outputArr.push(this[i]);
-      }
-    }
-    return outputArr;
+    
   }
 }
 

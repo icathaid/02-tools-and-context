@@ -41,7 +41,7 @@ describe('list module', () => {
   });
 
   //  foreach method
-  it('should add "Mc" to each name in the list', () => {
+    it('should add "Mc" to each name in the list', () => {
     let friends = new List(['Steve', 'Adam']);
     let friendList = new List(['McSteve', 'McAdam']);
     function McIfy(name){
@@ -51,7 +51,7 @@ describe('list module', () => {
     expect(friends).toEqual(friendList);
   });
   //  map method
-  it('should add 42 to each element of the input array', () => {
+    it('should add 42 to each element of the input array', () => {
     let questions = new List([1, 2, 3, 4, 5]);
     let answers = new List ([43, 44, 45, 46, 47]);
     function hitchHike(num){
@@ -61,14 +61,19 @@ describe('list module', () => {
     expect(questions).toEqual(answers);
   });
   //  filter method
-  it('should return an array of numbers if given an array of mixed data types', () => {
-    let inputList = new List([1, 'bill', 2, 'ted', 3]);
-    let outputList = new List([1, 2, 3]);
-    function noMoreAdventures(thing){
-      if(typeof thing === 'number'){
-        return true;
-      }
-    }
-    expect(inputList.map(noMoreAdventures)).toEqual(outputList);
+    it('should remove all numbers from a list', () => {
+    let unfilteredList = new List([1, 'bill', 2, 'ted', 3, 'rufus', 4]);
+    let answer = new List()['bill', 'ted', 'rufus'];
+    function noMoreNumbers(){
+      let filteredList = [];
+      for(var i = 0; i < this.length; i++){
+        if(!isNaN(this) === false){
+          filteredList.push[this[i]];
+        };
+      };
+      return filteredList;
+    };
+    const actual = unfilteredList.filter(noMoreNumbers);
+    expect(actual).toEqual(answer);
   });
 });
